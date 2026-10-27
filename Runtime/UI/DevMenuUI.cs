@@ -36,29 +36,30 @@ namespace HunterAllen.DevMenu
 
         public DevMenuEntryBuilder AddEntry(string group, string label)
         {
+            var groupComponent = GetGroup(group);
+
             return new DevMenuEntryBuilder() { Ui = this, Entry = new DevMenuEntry() { Group = group, Label = label } };
         }
         public void SpawnEntry(DevMenuEntry entry)
         {
             var group = GetGroup(entry.Group);
 
+            if (group.Entries.ContainsKey(entry.Label))
+            {
+                Debug.LogWarning($"Dev Menu group [{group}] already has an entry with the label [{entry.Label}]");
+                return;
+            }
+
             if (_groupsAnchor.ActiveMenu == null) group.Open();
 
             var entryUi = Instantiate(_prefabs.Entry, group.transform);
             entryUi.Build(entry, _prefabs);
+            group.AddEntry(entryUi);
         }
 
         public void RemoveEntry(string group, string label)
         {
-            if (!_groups.TryGetValue(group, out var groupComponent)) return;
-
-            foreach (var entry in groupComponent.GetComponentsInChildren<DevMenuEntryUI>())
-            {
-                if (entry.Id == label)
-                {
-                    Destroy(entry.gameObject);
-                }
-            }
+            if (_groups.TryGetValue(group, out var groupComponent) && groupComponent.Entries.TryGetValue(label, out var entry)) Destroy(entry.gameObject);
         }
 
         DevMenuGroup GetGroup(string group)
