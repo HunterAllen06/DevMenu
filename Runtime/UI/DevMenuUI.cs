@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace HunterAllen.DevMenu
 {
+    [DefaultExecutionOrder(-1)]
     public class DevMenuUI : MonoBehaviour
     {
         public static DevMenuUI Instance;
