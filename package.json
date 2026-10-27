@@ -1,0 +1,14 @@
+{
+  "name" : "com.hunterallen.devmenu",
+  "version" : "1.0.0",
+  "displayName" : "Debug Menu",
+  "author": 
+  {
+    "name": "Hunter Allen"
+  },
+  "dependencies":
+  {
+    "textmeshpro" : "1.0.0",
+    "com.hunterallen.menus" : "https://github.com/HunterAllen06/Menus.git"
+  }
+}

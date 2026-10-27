@@ -1,0 +1,17 @@
+{
+    "name": "HunterAllen.DevMenu",
+    "rootNamespace": "HunterAllen.DevMenu",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:1b9f2fd13ba0ab64788d60d6ba699c9c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
