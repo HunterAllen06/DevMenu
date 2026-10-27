@@ -12,7 +12,7 @@ namespace HunterAllen.DevMenu
             Initialize();
         }
         protected abstract void Initialize();
-        public void ValueChange(T value) => OnValueChange?.Invoke(value);
+        public virtual void ValueChange(T value) => OnValueChange?.Invoke(value);
         public virtual void SetValue(T value) { }
     }
 }
