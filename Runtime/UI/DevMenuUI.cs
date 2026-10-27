@@ -48,6 +48,19 @@ namespace HunterAllen.DevMenu
             entryUi.Build(entry, _prefabs);
         }
 
+        public void RemoveEntry(string group, string label)
+        {
+            if (!_groups.TryGetValue(group, out var groupComponent)) return;
+
+            foreach (var entry in groupComponent.GetComponentsInChildren<DevMenuEntryUI>())
+            {
+                if (entry.Id == label)
+                {
+                    Destroy(entry.gameObject);
+                }
+            }
+        }
+
         DevMenuGroup GetGroup(string group)
         {
             if (_groups.TryGetValue(group, out var groupComponent))

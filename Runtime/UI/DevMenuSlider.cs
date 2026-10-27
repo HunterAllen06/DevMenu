@@ -18,7 +18,7 @@ namespace HunterAllen.DevMenu
         public override void ValueChange(float value)
         {
             base.ValueChange(value);
-            if (_valueText) _valueText.text = value.ToString("0.00");
+            if (_valueText) _valueText.text = Slider.wholeNumbers ? value.ToString() : value.ToString("0.00");
         }
     }
 }

@@ -6,11 +6,13 @@ namespace HunterAllen.DevMenu
 {
     public class DevMenuEntryUI : MonoBehaviour
     {
+        public string Id;
         [SerializeField] TextMeshProUGUI _label;
         [SerializeField] Transform _anchor;
 
         internal DevMenuEntryUI Build(DevMenuEntry entry, DevMenuPrefabs prefabs)
         {
+            Id = entry.Label;
             _label.text = entry.Label;
 
             Action<DevMenuEntry, DevMenuPrefabs> spawnFunction = entry.Type switch
