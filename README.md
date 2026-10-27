@@ -22,3 +22,5 @@ DevMenuUI.Instance.AddEntry("Parameters", "Slider").WithSlider(0, 1).WithEvent<f
 void OnToggle(bool value) => Debug.Log(value);
 void OnSlider(float value) => Debug.Log(value);
 ```
+# IMPORTANT
+I don't know if this will import to pre-Unity 6 versions, I've been messing around with the dependencies trying to get them right
