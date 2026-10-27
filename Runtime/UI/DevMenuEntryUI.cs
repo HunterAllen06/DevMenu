@@ -52,6 +52,7 @@ namespace HunterAllen.DevMenu
             var slider = Instantiate(prefabs.Slider, _anchor);
             slider.Slider.minValue = entry.SliderMinValue;
             slider.Slider.maxValue = entry.SliderMaxValue;
+            slider.Slider.wholeNumbers = entry.SliderWholeNumbers;
             slider.SetValue(entry.SliderDefault);
 
             entry.GetValue = () => slider.Slider.value;
