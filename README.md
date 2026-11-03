@@ -23,4 +23,4 @@ void OnToggle(bool value) => Debug.Log(value);
 void OnSlider(float value) => Debug.Log(value);
 ```
 # IMPORTANT
-I don't know if this will import to pre-Unity 6 versions, I've been messing around with the dependencies trying to get them right
+You will need to import TMPro or UGUI on your own (which one depends on your Unity version), since my package uses TMPro.
