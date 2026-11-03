@@ -1,6 +1,6 @@
 {
   "name" : "com.hunterallen.devmenu",
-  "version" : "1.0.4",
+  "version" : "1.0.5",
   "displayName" : "Dev Menu",
   "author": 
   {
@@ -8,8 +8,6 @@
   },
   "dependencies":
   {
-    "com.hunterallen.menus" : "https://github.com/HunterAllen06/Menus.git",
-    "com.unity.ugui" : "2.5.0",
-    "com.unity.textmeshpro" : "3.0.9"
+    "com.hunterallen.menus" : "https://github.com/HunterAllen06/Menus.git"
   }
 }
